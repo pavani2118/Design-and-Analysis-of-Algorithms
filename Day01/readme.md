@@ -1,4 +1,9 @@
 ## Files
+ **matlab_operations.txt**: MATLAB command-line operations showcasing:
+  - Basic arithmetic operations
+  - Matrix creation and manipulation
+  - Element-wise operations
+  - Indexing and concatenatio
 - **one.m**: A MATLAB script that performs the following operations:
   - Checks if a number is positive or negative.
   - Determines if a number is even or odd.
