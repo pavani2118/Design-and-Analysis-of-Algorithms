@@ -314,17 +314,6 @@ B =
      1     1     1
      1     1     1
      1     1     1
-
->> C=threes(4,3)
-Unrecognized function or variable 'threes'.
- 
-Did you mean:
->> C=tree(4,3)
-Error using tree (line 50)
-first input argument must be string of names separated by commas
- 
->> C=thirds(4,3)
-Unrecognized function or variable 'thirds'.
  
 >> [A B]
 
@@ -405,18 +394,6 @@ ans =
     10    12    14    16     3     1     0    13     3     1     0    13
     18    20    22    24    21    31    25    23    21    31    25    23
     26    28    30    32    27    29    15    17    27    29    15    17
-
->> [Z;B]
-Error using vertcat
-Dimensions of arrays being concatenated are not consistent.
- 
->> [Z;K]
-Error using vertcat
-Dimensions of arrays being concatenated are not consistent.
- 
->> [Z;B]
-Error using vertcat
-Dimensions of arrays being concatenated are not consistent.
  
 >> [K;B]
 
