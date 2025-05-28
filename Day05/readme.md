@@ -1,8 +1,3 @@
-* ATM Simulation
-* Student Grading with Visualization
-* Student Club Voting System with multiple charts
-
----
 ## 🧰 Included Programs
 
 ### 1️⃣ ATM Simulation 🏧  
