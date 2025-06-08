@@ -1,0 +1,47 @@
+% Graph 1 (Cycle)
+s1 = [4 4 3 2 1];
+t1 = [5 3 2 1 5];
+
+% Graph 2 (Star from node 11)
+s2 = repmat(11, 1, 10);   % Center node 11 connects to 1–10
+t2 = 1:10;
+
+% Graph 3 (Zigzag path)
+s3 = [4 8 3 7 2 6 1 10 5 9];
+t3 = [8 3 7 2 6 1 10 5 9 4];
+
+% Combine edge lists
+all_s = [s1, s2, s3];
+all_t = [t1, t2, t3];
+
+% Create the graph
+G = graph(all_s, all_t);
+h = plot(G, 'Layout', 'force');
+
+% Get all edges as source-target pairs
+edges = [all_s', all_t'];
+
+% Define edge groups (by original index in edges)
+cycleEdges   = 1:5;     % First 5 edges (Graph 1)
+starEdges    = 6:15;    % Next 10 edges (Graph 2)
+zigzagEdges  = 16:25;   % Last 10 edges (Graph 3)
+
+% Highlight cycle edges (Blue)
+for i = cycleEdges
+    highlight(h, edges(i,1), edges(i,2), 'EdgeColor', [0 0.45 0.74]); % blue
+end
+
+% Highlight star edges (Orange)
+for i = starEdges
+    highlight(h, edges(i,1), edges(i,2), 'EdgeColor', [0.85 0.33 0.10]); % orange
+end
+
+% Highlight zigzag path (Cyan)
+for i = zigzagEdges
+    highlight(h, edges(i,1), edges(i,2), 'EdgeColor', [0.30 0.75 0.93]); % cyan
+end
+
+% Optional: node styling
+h.NodeColor = [0.6 0 0.6]; % purple
+h.LineWidth = 1.5;
+title('Graph with Color-Coded Edge Groups');
